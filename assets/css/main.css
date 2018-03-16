@@ -6,10 +6,10 @@
 }
 .test-height{
     height: 250px !important;
-} */
+}
 .bglightgray{
     background-color: lightgray;
-}
+} */
 .title{
     text-align: left;
     text-transform: uppercase;
@@ -27,6 +27,11 @@
     width: 560px;
     display: table;
 }
-.equal{
-    height: 40px;
+.btn{
+    padding-left: 15px !important;
+}
+@media (min-width: 768px){
+    .equal{
+        height: 40px;
+    }
 }
