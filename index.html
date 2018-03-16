@@ -55,22 +55,22 @@
                 <div class="col-md-4 bgcyan">
                     <div class="row equal">
                         <label class="radio-inline col-md-6">
-                            <input type="radio" name="operation" id="plus"> Cộng</label>
+                            <input type="radio" name="operation" id="plus" value="plus"> Cộng</label>
                         <label class="radio-inline col-md-6">
-                            <input type="radio" name="operation" id="minus"> Trừ</label>
+                            <input type="radio" name="operation" id="minus" value="minus"> Trừ</label>
 
                     </div>
                     <div class="row equal bgred">
 
                         <label class="radio-inline col-md-6">
-                            <input type="radio" name="operation" id="multiply"> Nhân</label>
+                            <input type="radio" name="operation" id="multiply" value="multiply"> Nhân</label>
                         <label class="radio-inline col-md-6">
-                            <input type="radio" name="operation" id="devide"> Chia</label>
+                            <input type="radio" name="operation" id="divide" value="divide"> Chia</label>
                     </div>
 
                     <div class="row equal">
                         <div class="col-md-12">
-                            <button type="button" class="btn btn-danger" onclick="calculate">Tính</button>
+                            <button type="button" class="btn btn-danger" onclick="calculate()">Tính</button>
                         </div>
                     </div>
                 </div>
@@ -79,10 +79,13 @@
 
             <!-- notification -->
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-3">
                     <label>Thông báo</label>
-                    <span id="notification"></span>
+
                 </div>
+                <span class="col-md-9">
+                    <span id="notification"></span>
+                </span>
             </div>
 
         </div>
