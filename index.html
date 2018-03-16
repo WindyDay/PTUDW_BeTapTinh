@@ -4,21 +4,90 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Bé tập tính</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-
     <!-- Optional CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
 </head>
 
 <body>
 
+    <div class="container-fluid  ">
+        <div class="container bglightgray ">
+            <h1 class="title">Bé tập tính</h1>
+            <div class="row">
+                <!-- First column -->
+                <div class="col-md-8 bgred">
+                    <div class="row equal">
+                        <div class="col-md-4">
+                            <label for="#1st-num">Số thứ nhất</label>
+                        </div>
+                        <div class="col-md-8">
+
+                            <input type="text" name="1st-num" id="1st-num" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row equal bgcyan">
+                        <div class="col-md-4">
+                            <label for="#2nd-num">Số thứ hai</label>
+                        </div>
+                        <div class="col-md-8">
+
+                            <input type="text" name="2nd-num" id="2nd-num" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row equal">
+                        <div class="col-md-4">
+                            <label for="#result">Kết quả</label>
+                        </div>
+                        <div class="col-md-8">
+
+                            <input type="text" name="result" id="result" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <!-- End first column -->
+
+                <!-- second col -->
+                <div class="col-md-4 bgcyan">
+                    <div class="row equal">
+                            <label class="radio-inline col-md-6">
+                                <input type="radio" name="operation" id="plus"> Cộng</label>
+                            <label class="radio-inline col-md-6">
+                                <input type="radio" name="operation" id="minus"> Trừ</label>
+
+                    </div>
+                    <div class="row equal bgred">
+
+                            <label class="radio-inline col-md-6">
+                                    <input type="radio" name="operation" id="multiply"> Nhân</label>
+                                <label class="radio-inline col-md-6">
+                                    <input type="radio" name="operation" id="devide"> Chia</label>
+                    </div>
+
+                    <div class="row equal">
+                        <button type="button" class="btn btn-danger" onclick="calculate">Tính</button>
+                    </div>
+                </div>
+                <!-- End second col -->
+            </div>
+
+            <!-- notification -->
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Thông báo</label>
+                    <span id="notification"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
-    <script src="main.js"></script>
+    <script src="assets/js/main.js"></script>
     <!-- jQuery first then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
