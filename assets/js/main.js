@@ -5,6 +5,7 @@ const ID_INPUT_SECOND_NUM = '2nd-num';
 const ID_INPUT_RESULT = 'result';
 
 
+const CODE_BLANK  = "";
 const CODE_OK  = "OK";
 const CODE_100 = "Không thể chia cho không";
 const CODE_101 = "Vui lòng nhập số thứ nhất";
@@ -58,7 +59,7 @@ function calculate() {
                 }
         }
     }
-    document.getElementById(ID_NOTIFICATION).innerText=validateCode;
+    printNotification(validateCode);
 
 
 }
@@ -102,4 +103,29 @@ function validateInput(firstValue, secondValue, checked_operation) {
 
 function printResult(result){
     document.getElementById(ID_INPUT_RESULT).value = result;
+}
+
+function printNotification(code){
+    document.getElementById(ID_NOTIFICATION).innerText=code;
+}
+
+function loseFocus(obj){
+    let value = document.getElementById(obj.id).value;
+    if(value === "" || value === undefined){
+        if(obj.id === ID_INPUT_FIRST_NUM)
+            printNotification(CODE_101) ;
+        else
+            printNotification(CODE_102) ;
+        return;
+    }
+    let a = Number.parseFloat(value);
+    if(Number.isNaN(a)){
+        if(obj.id === ID_INPUT_FIRST_NUM)
+            printNotification(CODE_104) ;
+        else
+            printNotification(CODE_105) ;
+        return;
+    }
+
+    printNotification(CODE_BLANK);
 }
